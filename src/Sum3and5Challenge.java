@@ -19,7 +19,14 @@ public class Sum3and5Challenge {
         //}
         //System.out.println(result);
 
-        isPalindrome(11212);
+        //isPalindrome(11212);
+        int[] dp = new int[10];
+        dp[0] = 1;
+        for(int a=0; a < 10; ++a){
+            System.out.println(dp[a]);
+
+        }
+
 
     }
     public static boolean isOdd(int number){
@@ -80,6 +87,54 @@ public class Sum3and5Challenge {
             return first + last;
         }
     }
+    public static int getEvenDigitSum(int number){
+        public static int getEvenDigitSum(int number){
+            int sum = 0;
+            int digit = 0;
+            if(number < 0){
+                return -1;
+            }else {
+                while(number != 0){
+                    digit = number % 10;
+
+                    if(digit % 2 ==0){
+                        sum += digit;
+                    }
+                    number /= 10;
+                }
+                return sum;
+
+            }
+
+
+
+        }
+
+
+    }
+    public static boolean hasShareDigit(int a, int b){
+        if((a > 99 || a < 10 ) && (b > 99 || b < 10)){
+            return false;
+        }else {
+            while (a > 0) {
+                int alst = a % 10;
+                int blst = b;
+                while (blst > 0) {
+                    int compare = blst % 10;
+                    if (alst == compare) {
+                        return true;
+                    }
+                    blst /= 10;
+                }
+                a /= 10;
+
+            }
+            return false;
+        }
+
+    }
+
+
 
 
 
