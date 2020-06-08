@@ -5,19 +5,21 @@
  */
 public class Sum3and5Challenge {
     public static void main(String[] args) {
-        int result = 0;
-        int count = 0;
-        for(int i = 1; i < 1000; i++){
-            if( i%3 == 0 && i % 5 == 0){
-                System.out.println(i);
-                result += i;
-                count += 1;
-            }
-            if(count == 5)
-                break;
+        //int result = 0;
+        //int count = 0;
+        //for(int i = 1; i < 1000; i++){
+        //    if( i%3 == 0 && i % 5 == 0){
+        //        System.out.println(i);
+         //       result += i;
+        //        count += 1;
+        //    }
+        //    if(count == 5)
+        //        break;
 
-        }
-        System.out.println(result);
+        //}
+        //System.out.println(result);
+
+        isPalindrome(11212);
 
     }
     public static boolean isOdd(int number){
@@ -45,6 +47,40 @@ public class Sum3and5Challenge {
         }
         return result;
     }
+    public static boolean isPalindrome(int number){
+        int reverse = 0;
+        int temp = number;
+        while (number != 0) {
+            int lastDigit = number%10;
+            reverse = (reverse * 10 +lastDigit);
+            number = (int)number/10;
+            System.out.println(number);
+        }
+        if(temp == reverse){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    public static int sumFirstAndLastDigit(int number){
+        int first = 0;
+        int last = number % 10;
+        if(number < 0){
+            return -1;
+        }else{
+            if(number < 10){
+                first = last;
+                return first+last;
+            }
+            while(number>=10){
+                number /= 10;
+            }
+            first = number;
+            return first + last;
+        }
+    }
+
 
 
 }
