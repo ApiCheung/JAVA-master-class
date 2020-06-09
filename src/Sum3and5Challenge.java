@@ -26,6 +26,9 @@ public class Sum3and5Challenge {
             System.out.println(dp[a]);
 
         }
+        String numberAsString = "2018";
+        System.out.println("numberAsString = " + numberAsString);
+        int number = Integer.parseInt(numberAsString);
 
 
     }
@@ -88,7 +91,7 @@ public class Sum3and5Challenge {
         }
     }
     public static int getEvenDigitSum(int number){
-        public static int getEvenDigitSum(int number){
+
             int sum = 0;
             int digit = 0;
             if(number < 0){
@@ -111,7 +114,6 @@ public class Sum3and5Challenge {
         }
 
 
-    }
     public static boolean hasShareDigit(int a, int b){
         if((a > 99 || a < 10 ) && (b > 99 || b < 10)){
             return false;
@@ -133,6 +135,85 @@ public class Sum3and5Challenge {
         }
 
     }
+    public static boolean hasSameLastDigit(int a, int b, int c){
+        if(isValid(a) &&isValid(b) &&isValid(c)){
+            int al = a % 10;
+            int bl = b % 10;
+            int cl = c % 10;
+            if(al == bl || al == cl || bl == cl){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+    public static boolean isValid(int a){
+        if(a > 1000 || a < 10 ) {
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+    public static int getGreatestCommonDivisor(int a, int b){
+        int c = 0;
+        if(a < 10 || b < 10){
+            return -1;
+        }else{
+            for(int i = 2 ;i<=a; i++){
+                if(a % i ==0){
+                    for(int j = 2; j <=b; j++){
+                        if(b % j == 0 && i == j){
+                            c = j;
+                        }
+                    }
+                }
+
+            }
+
+        } return c;
+
+    }
+    public static boolean canPack(int bigCount, int smallCount, int goal){
+        if(bigCount < 0 || smallCount < 0 || goal < 0){
+            return false;
+        }else{
+            if (((bigCount * 5) + smallCount) < goal){
+                return false;
+            }else{
+                return goal % 5 <= smallCount;
+            }
+
+        }
+
+
+
+
+    }
+    public static int getLargestPrime(int number){
+        if(number <= 1){
+            return -1;
+        }
+        int x = 2;
+        while(x < number){
+            if(number % x != 0){
+                x++;
+            }else{
+                number = number / x;
+                x = 2;
+            }
+
+
+        }
+        return number;
+
+
+    }
+
+
+
 
 
 
