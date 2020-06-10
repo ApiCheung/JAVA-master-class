@@ -20,15 +20,16 @@ public class Sum3and5Challenge {
         //System.out.println(result);
 
         //isPalindrome(11212);
-        int[] dp = new int[10];
-        dp[0] = 1;
-        for(int a=0; a < 10; ++a){
-            System.out.println(dp[a]);
+        //int[] dp = new int[10];
+        //dp[0] = 1;
+        //for(int a=0; a < 10; ++a){
+        //    System.out.println(dp[a]);
 
-        }
-        String numberAsString = "2018";
-        System.out.println("numberAsString = " + numberAsString);
-        int number = Integer.parseInt(numberAsString);
+        //}
+        //String numberAsString = "2018";
+        //System.out.println("numberAsString = " + numberAsString);
+        //int number = Integer.parseInt(numberAsString);
+        printSquareStar(8);
 
 
     }
@@ -211,7 +212,24 @@ public class Sum3and5Challenge {
 
 
     }
+    public static void printSquareStar(int number){
 
+        if(number < 5){
+            System.out.println("Invalid number");
+        }else{
+            for(int i = 1; i<= number; i++){
+                for(int j = 1; j<= number; j++){
+                    if(i == 1|| i == number|| j==1 ||j == number|| i == j || j == number+1 - i){
+                        System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+
+    }
 
 
 
