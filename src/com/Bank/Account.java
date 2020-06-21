@@ -12,6 +12,12 @@ public class Account {
     private String customerName;
     private String customerEmailAddress;
     private String customerPhoneNumber;
+
+    private int x;
+    private int y;
+
+
+
     //create a constractor
     public Account(){
         //calling another construcroe within a constru=ctor 并且需要在sout前面。
