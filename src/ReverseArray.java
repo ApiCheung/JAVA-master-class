@@ -22,8 +22,6 @@ public class ReverseArray {
             temp = array[start];
             array[start] = array[end];
             array[end] = temp;
-
-            temp = 0;
             start ++;
             end --;
         }
