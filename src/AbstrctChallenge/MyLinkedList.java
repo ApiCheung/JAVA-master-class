@@ -15,7 +15,7 @@ public class MyLinkedList implements NodeList {
     }
 
     @Override
-    public List getRoot() {
+    public ListItem getRoot() {
         return null;
     }
 
@@ -28,7 +28,8 @@ public class MyLinkedList implements NodeList {
 
         ListItem currentItem = this.root;
         while(currentItem != null){
-            int comparison = (currentItem.compareTo(newItem));
+            int compari
+            son = (currentItem.compareTo(newItem));
             if(comparison < 0){
                 if(currentItem.next() != null){
                     currentItem = currentItem.next();

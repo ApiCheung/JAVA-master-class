@@ -8,7 +8,7 @@ import java.util.List;
  * @projectName JAVA-master-class
  */
 public interface NodeList {
-    List getRoot();
+    ListItem getRoot();
     boolean addItem(ListItem item);
     boolean removeItem(ListItem item);
     void tranverse(ListItem root);
